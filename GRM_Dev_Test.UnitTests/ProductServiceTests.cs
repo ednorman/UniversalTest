@@ -1,4 +1,3 @@
-using System;
 using Xunit;
 using FluentAssertions;
 
@@ -9,7 +8,7 @@ namespace GRM_Dev_Test.UnitTests
         ProductService _productService;
         public ProductServiceTests()
         {
-            _productService = new ProductService();
+            _productService = PartnerProductService.Instance;
         }
         [Fact]
         public void Test1()
@@ -23,7 +22,7 @@ namespace GRM_Dev_Test.UnitTests
  Tinie Tempah|Miami 2 Ibiza|digital download|1st Feb 2012|
 ";
             //Act
-            var result = _productService.DoWork(input);
+            var result = _productService.TemplateMethod(input);
             //Assert
             result.Should().Be(expected);
         }
@@ -38,7 +37,7 @@ namespace GRM_Dev_Test.UnitTests
  Tinie Tempah|Frisky (Live from SoHo)|streaming|1st Feb 2012|
 ";
             //Act
-            var result = _productService.DoWork(input);
+            var result = _productService.TemplateMethod(input);
             //Assert
             result.Should().Be(expected);
         }
@@ -55,7 +54,7 @@ namespace GRM_Dev_Test.UnitTests
  Tinie Tempah|Frisky (Live from SoHo)|streaming|1st Feb 2012|
 ";
             //Act
-            var result = _productService.DoWork(input);
+            var result = _productService.TemplateMethod(input);
             //Assert
             result.Should().Be(expected);
         }

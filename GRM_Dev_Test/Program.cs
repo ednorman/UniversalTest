@@ -6,10 +6,9 @@ namespace GRM_Dev_Test
     {
         static void Main(string[] args)
         {
-            //The deliberate mistake is "Usages" instead of usage?
-            //Or is it the 25st?
-            ProductService productService = new ProductService();
-            var result = productService.DoWork(args[0]);
+            //The deliberate mistake is the 25st
+            ProductService productService = PartnerProductService.Instance;
+            var result = productService.TemplateMethod(args[0]);
             Console.WriteLine(result);
         }
     }

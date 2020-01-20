@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GRM_Dev_Test
+﻿namespace GRM_Dev_Test
 {
     public class DistributionPartnerContract
     {
